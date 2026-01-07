@@ -2,75 +2,14 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>SocotraTime</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-/* ================= PRICING CARDS ================= */
-.pricing-section{
-    padding:8vw 3vw;
-    background:linear-gradient(120deg,#FF9800,#FF5722);
-    border-radius:30px;
-    margin:5vw auto;
-    max-width:1200px;
-    color:white;
-    text-align:center;
-}
-.pricing-section h2{
-    font-size:3.5vw;
-    font-weight:800;
-    margin-bottom:3vw;
-    background:linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-.pricing-cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:2vw;
-}
-.pricing-card{
-    background:rgba(255,255,255,0.1);
-    backdrop-filter:blur(20px);
-    border-radius:25px;
-    padding:2vw;
-    width:250px;
-    transition:0.4s;
-    cursor:pointer;
-    box-shadow:0 0 30px rgba(0,0,0,0.3);
-}
-.pricing-card:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 50px rgba(255,152,0,0.8);
-}
-.pricing-card h3{
-    font-size:1.5vw;
-    font-weight:700;
-    margin-bottom:1vw;
-}
-.pricing-card p{
-    font-size:1.2vw;
-    margin:0.5vw 0;
-}
-.pricing-card span{
-    display:block;
-    font-size:2vw;
-    font-weight:800;
-    margin-top:1vw;
-    background:linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-@media(max-width:768px){
-    .pricing-card{width:90%; margin:auto;}
-    .pricing-card h3{font-size:4vw;}
-    .pricing-card p{font-size:3.5vw;}
-    .pricing-card span{font-size:5vw;}
-    .pricing-section h2{font-size:6vw;}
-}
-</style>
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -92,6 +31,7 @@
       <img src="images/0.jpg">
       <div id="clock"></div>
     </div>
+
     <div class="lang-btns">
       <span class="lang-btn">AR</span>
       <span class="lang-btn">EN</span>
@@ -99,53 +39,54 @@
   </div>
 
   <nav>
-
     <a href="#contact">التواصل</a>
     <a href="#prices">الأسعار</a>
-    <a href="#team">خدماتنا</a>
+    <a href="#services">خدماتنا</a>
     <a href="#team">طاقم العمل</a>
     <a href="#mountains">الأماكن</a>
-    <a href="#birds">الطيور & النباتات</a>
-    <a href="#about">الاسئلة الشائعة</a>
-    <a href="#about">الرئيسية</a>
+    <a href="#birds">الطيور</a>
+    <a href="#plants">النباتات</a>
+    <a href="#about">عن سقطرى</a>
+    <a href="#">الرئيسية</a>
   </nav>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
   <h1>SocotraTime</h1>
+
   <div class="overlay">
     <div class="card">
-      <img src="images/d5.jpg" alt="1">
+      <img src="images/1.jpg">
       <div class="text">وصف الصورة 1</div>
     </div>
+
     <div class="card">
-      <img src="images/b1.jpg" alt="2">
+      <img src="images/2.jpg">
       <div class="text">وصف الصورة 2</div>
     </div>
+
     <div class="card">
-      <img src="images/a11.jpeg" alt="3">
+      <img src="images/3.jpg">
       <div class="text">وصف الصورة 3</div>
     </div>
+
     <div class="card">
-      <img src="images/a1.jpg" alt="4">
+      <img src="images/4.jpg">
       <div class="text">وصف الصورة 4</div>
     </div>
   </div>
 </section>
 
-<!-- SECTION DIVIDER -->
-<div class="section-divider">
-  <span class="arrow-down">⬇</span>
-</div>
-
-<!-- ABOUT SOCOTRA -->
-<section id="about" class="section about-socotra" data-num="1">
+<!-- ABOUT -->
+<section id="about" class="about-socotra">
   <h2>About Socotra Island 🏝</h2>
+
   <div class="about-content">
     <div class="icon-box">
-      <img src="images/photos.jpg" alt="Socotra Icon">
+      <img src="images/island.png">
     </div>
+
     <div class="text-box">
       Socotra Island, located in the Arabian Sea, is known for its unique biodiversity and stunning landscapes...
       <button class="discover-btn">اكتشف</button>
@@ -153,13 +94,15 @@
   </div>
 </section>
 
-<!-- PLANTS SECTION -->
-<section id="plants" class="plants-section" data-num="2">
+<!-- PLANTS -->
+<section id="plants" class="plants-section">
   <h2>النباتات والأشجار 🌿</h2>
+
   <div class="about-content">
     <div class="icon-box">
-      <img id="plants-icon" src="images/b3.jpg" alt="Plants Icon">
+      <img id="plants-icon" src="images/b1.jpg">
     </div>
+
     <div class="text-box">
       سقطرى موطن لتنوع مذهل من النباتات والأشجار...
       <button class="discover-btn">اكتشف</button>
@@ -167,13 +110,15 @@
   </div>
 </section>
 
-<!-- BIRDS SECTION -->
-<section id="birds" class="birds-section" data-num="3">
+<!-- BIRDS -->
+<section id="birds" class="birds-section">
   <h2>الطيور 🐦</h2>
+
   <div class="about-content">
     <div class="icon-box">
-      <img id="birds-icon" src="images/c2.jpg" alt="Birds Icon">
+      <img id="birds-icon" src="images/c1.jpg">
     </div>
+
     <div class="text-box">
       سقطرى موطن للعديد من الطيور النادرة...
       <button class="discover-btn">اكتشف</button>
@@ -181,13 +126,15 @@
   </div>
 </section>
 
-<!-- MOUNTAINS SECTION -->
-<section id="mountains" class="mountains-section" data-num="4">
-  <h2>الأماكن  ⛰️</h2>
+<!-- MOUNTAINS -->
+<section id="mountains" class="mountains-section">
+  <h2>الأماكن ⛰️</h2>
+
   <div class="about-content">
     <div class="icon-box">
-      <img id="mountains-icon" src="images/d5.png" alt="Mountains Icon">
+      <img id="mountains-icon" src="images/d1.jpg">
     </div>
+
     <div class="text-box">
       تحتوي سقطرى على جبال شاهقة وووديان ساحرة...
       <button class="discover-btn">اكتشف</button>
@@ -195,176 +142,102 @@
   </div>
 </section>
 
-<!-- TEAM SECTION -->
-<section id="team" class="team-section" data-num="5">
+<!-- TEAM -->
+<section id="team" class="team-section">
   <h2>طاقم العمل للوكالة 👥</h2>
+
   <div class="about-content">
     <div class="icon-box">
-      <img id="team-icon" src="images/t1.jpg" alt="Team Icon">
+      <img id="team-icon" src="images/t1.jpg">
     </div>
+
     <div class="text-box">
       فريقنا المتخصص يسعى لتقديم أفضل تجربة سياحية...
       <button class="discover-btn">اكتشف</button>
     </div>
   </div>
-</section><section class="services-section" id="services">
-    <h2>Our Services</h2>
-
-    <div class="services-cards">
-
-        <!-- Service 1 -->
-        <div class="service-card">
-            <i class="fas fa-map-marked-alt"></i>
-            <h3>Private Tours</h3>
-            <p>Customized private tours across Socotra Island</p>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="service-card">
-            <i class="fas fa-users"></i>
-            <h3>Group Tours</h3>
-            <p>Perfect travel experience for groups and families</p>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="service-card">
-            <i class="fas fa-mountain"></i>
-            <h3>Adventure Trips</h3>
-            <p>Mountains, canyons, hiking and wild nature</p>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="service-card">
-            <i class="fas fa-user-tie"></i>
-            <h3>Local Guides</h3>
-            <p>Professional local guides with deep knowledge</p>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="service-card">
-            <i class="fas fa-campground"></i>
-            <h3>Camping Experi</h3>
-            <p>Unique camping under Socotra’s night sky</p>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="service-card">
-            <i class="fas fa-car"></i>
-            <h3>Transportation</h3>
-            <p>Comfortable transportation across the island</p>
-        </div>
-
-
-        <!-- Service 7 -->
-        <div class="service-card">
-            <i class="fas fa-car"></i>
-            <h3>Transportation</h3>
-            <p>Comfortable transportation across the island</p>
-        </div>
-
-    </div>
 </section>
 
-<!-- قسم السعر -->
-<section class="price-section">
-    <h2>السعر</h2>
-    <div class="price-cards">
-        <div class="price-card">
-            <h3>Solo Traveler</h3>
-            <p>$1,600</p>
-        </div>
-        <div class="price-card">
-            <h3>Group of 2–3 Persons</h3>
-            <p>$1,400 per person</p>
-        </div>
-        <div class="price-card">
-            <h3>Group of 4–8 Persons</h3>
-            <p>$1,300 per person</p>
-        </div>
-        <div class="price-card">
-            <h3>Group of 9+ Persons</h3>
-            <p>$1,100 per person</p>
-        </div>
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <h2>Our Services</h2>
 
-        <div class="price-card">
-            <h3>VIP</h3>
-        </div>
+  <div class="services-cards">
+    <div class="service-card">
+      <i class="fas fa-map-marked-alt"></i>
+      <h3>Private Tours</h3>
+      <p>Customized private tours across Socotra Island</p>
     </div>
+
+    <div class="service-card">
+      <i class="fas fa-users"></i>
+      <h3>Group Tours</h3>
+      <p>Perfect travel experience for groups and families</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-mountain"></i>
+      <h3>Adventure Trips</h3>
+      <p>Mountains, canyons, hiking and wild nature</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-user-tie"></i>
+      <h3>Local Guides</h3>
+      <p>Professional local guides with deep knowledge</p>
+    </div>
+  </div>
 </section>
 
+<!-- PRICES -->
+<section id="prices" class="price-section">
+  <h2>السعر</h2>
 
-<!-- رابط FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <div class="price-cards">
+    <div class="price-card">
+      <h3>Solo Traveler</h3>
+      <p>$1,600</p>
+    </div>
 
+    <div class="price-card">
+      <h3>Group 2–3</h3>
+      <p>$1,400</p>
+    </div>
+
+    <div class="price-card">
+      <h3>Group 4–8</h3>
+      <p>$1,300</p>
+    </div>
+
+    <div class="price-card">
+      <h3>Group 9+</h3>
+      <p>$1,100</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <h2>تواصل معنا</h2>
+
+  <div class="contact-icons">
+    <a class="contact-icon"><i class="fab fa-whatsapp"></i></a>
+    <a class="contact-icon"><i class="fab fa-facebook-f"></i></a>
+    <a class="contact-icon"><i class="fab fa-instagram"></i></a>
+    <a class="contact-icon"><i class="fab fa-twitter"></i></a>
+    <a class="contact-icon"><i class="fab fa-telegram-plane"></i></a>
+    <a class="contact-icon"><i class="fab fa-tiktok"></i></a>
+  </div>
+</section>
 
 <footer>© 2026 SocotraTime</footer>
 
 <script>
-// ============ SPLASH ============ 
 function closeSplash(){
   const s=document.getElementById("splash");
   s.style.opacity=0;
   setTimeout(()=>s.remove(),1000);
 }
-
-// ============ CLOCK ============
-function updateClock(){
-  const d=new Date(Date.now()+3*3600000);
-  document.getElementById("clock").innerText=
-    d.getUTCHours().toString().padStart(2,'0')+":"+ 
-    d.getUTCMinutes().toString().padStart(2,'0')+":"+ 
-    d.getUTCSeconds().toString().padStart(2,'0');
-}
-setInterval(updateClock,1000);
-updateClock();
-
-// ============ HEADER HIDE ============
-let lastScroll=0;
-const header=document.querySelector("header");
-window.addEventListener("scroll",()=>{
-  const c=window.pageYOffset;
-  if(c>lastScroll && c>50){
-    header.classList.add("hidden");
-  }else{
-    header.classList.remove("hidden");
-  }
-  lastScroll=c;
-});
-
-// ============ ICON ROTATIONS ============
-window.addEventListener('DOMContentLoaded', () => {
-    const plantsImages = ["images/b1.jpg","images/b2.jpg","images/b3.jpg","images/b4.jpg","images/b5.jpg"];
-    let currentPlantIndex = 0;
-    const plantsIcon = document.getElementById("plants-icon"); 
-    setInterval(() => {
-        currentPlantIndex = (currentPlantIndex + 1) % plantsImages.length;
-        plantsIcon.src = plantsImages[currentPlantIndex];
-    }, 5000);
-
-    const birdsImages = ["images/c1.jpg","images/c2.jpg","images/c3.jpg","images/c4.jpg","images/c5.jpg"];
-    let currentBirdIndex = 0;
-    const birdsIcon = document.getElementById("birds-icon"); 
-    setInterval(() => {
-        currentBirdIndex = (currentBirdIndex + 1) % birdsImages.length;
-        birdsIcon.src = birdsImages[currentBirdIndex];
-    }, 5000);
-
-    const mountainsImages = ["images/d1.jpg","images/d2.jpg","images/d3.jpg","images/d4.jpg","images/d5.jpg"];
-    let currentMountainIndex = 0;
-    const mountainsIcon = document.getElementById("mountains-icon"); 
-    setInterval(() => {
-        currentMountainIndex = (currentMountainIndex + 1) % mountainsImages.length;
-        mountainsIcon.src = mountainsImages[currentMountainIndex];
-    }, 5000);
-
-    const teamImages = ["images/t1.jpg","images/t2.jpg","images/t3.jpg","images/t4.jpg","images/t5.jpg"];
-    let currentTeamIndex = 0;
-    const teamIcon = document.getElementById("team-icon"); 
-    setInterval(() => {
-        currentTeamIndex = (currentTeamIndex + 1) % teamImages.length;
-        teamIcon.src = teamImages[currentTeamIndex];
-    }, 5000);
-});
 </script>
 
 </body>
