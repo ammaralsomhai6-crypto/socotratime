@@ -34,12 +34,12 @@ SPLASH SCREEN
 
 .splash-box {
     background: rgba(255,255,255,0.04);
-    backdrop-filter: blur(50px);
-    padding: 10px;
+    backdrop-filter: blur(20px);
+    padding: 20px;
     border-radius: 250px;
     text-align: center;
     width: 100%;
-    max-width: 800px;
+    max-width:400px;
 }
 
 #splash-logo {
@@ -51,24 +51,24 @@ SPLASH SCREEN
 }
 
 .splash-box h1 {
-    font-size: 5vw;
-    max-font-size: 100px;
-    margin: -40px 0;
+    font-size: 10vw;
+    max-font-size: 50px;
+    margin: 0px 0;
     background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
     -webkit-background-clip: text;
     color: transparent;
 }
 
 .splash-box p {
-    font-size: 1.5vw;
-    max-font-size: 3px;
-    margin-bottom: 8px;
+    font-size: 2.5vw;
+    max-font-size: 2px;
+    margin-bottom: 80px;
 }
 
 .splash-box button {
-    padding: 1.5vw 2.5vw;
-    font-size: 1.3vw;
-    max-font-size: 30px;
+    padding: 2.5vw 3.5vw;
+    font-size: 2.3vw;
+    max-font-size: 40px;
     border: none;
     border-radius: 50px;
     color: white;
@@ -172,7 +172,7 @@ nav a:hover {
 HERO SECTION
 ============================================= */
 .hero {
-    min-height: 150vh;
+    min-height: 100vh;
     background: url("images/socotra.jpg") center / cover no-repeat;
     position: relative;
 }
@@ -182,7 +182,7 @@ HERO SECTION
     top: 2vw;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 5vw;
+    font-size: 8vw;
     background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
     -webkit-background-clip: text;
     color: transparent;
@@ -192,7 +192,7 @@ HERO SECTION
 .hero .overlay {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 4vw;
+    gap: 10vw;
     padding: 35vw 2vw 2vw 2vw;
     justify-items: center;
     align-items: start;
@@ -227,8 +227,8 @@ HERO SECTION
 
 .hero .card .text {
     padding: 2.5vw;
-    font-size: 1.2vw;
-    font-weight: 900;
+    font-size: 0.2vw;
+    font-weight: 90;
     text-align: center;
     color: white;
     background: rgba(0,0,0,0.35);
@@ -239,6 +239,31 @@ HERO SECTION
 }
 
 .hero .card:hover img { transform: scale(1.1); }
+
+
+
+.hero h1 {
+    position: absolute;
+    top: 50%; /* منتصف القسم عموديًا */
+    left: 50%; /* منتصف القسم أفقيًا */
+    transform: translate(-50%, -50%);
+    font-size: 1vw;
+    font-weight: 90;
+    color: white;
+    text-align: center;
+
+    /* الخلفية الشفافة */
+    background: rgba(0, 0, 0, 0.35); /* لون أسود شفاف */
+    padding: 1vw 2vw;
+    border-radius: 20px;
+
+    /* تحسين المظهر */
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+
+
+
 
 /* =============================================
 HERO CARDS - تعديل حجم الصور الأربع الأولى لتكون أصغر وفي سطر واحد
@@ -263,6 +288,44 @@ HERO CARDS - تعديل حجم الصور الأربع الأولى لتكون �
     height: 100%;            /* ملء البطاقة رأسياً */
     object-fit: cover;       /* المحافظة على نسبة الصورة */
     border-radius: 30px;     /* نفس انحناء البطاقة */
+}
+
+
+/* =============================================
+HERO TEXT BOX ABOVE CARDS
+============================================= */
+.hero h1 {
+    position: relative; /* بدل absolute حتى يكون داخل التدفق الطبيعي */
+    top: 0; /* إزالة أي ازاحة سابقة */
+    left: 0;
+    transform: none; /* إزالة التحويل القديم */
+    margin: 0 auto 3vw auto; /* مركز أفقي + مسافة أسفل المربع */
+    display: inline-block;
+    font-size: 0vw;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+
+    /* الخلفية الشفافة */
+    background: rgba(0, 0, 0, 0.40);
+    padding: 29vw 0vw;
+    border-radius: 100px;
+
+    /* تحسين المظهر */
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+/* =============================================
+HERO OVERLAY - الصور الأربع تتحرك أسفل النص
+============================================= */
+.hero .overlay {
+    margin-top: -25vw; /* مسافة بين المربع الشفاف والصور */
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10vw;
+    padding: 100 2vw 2vw 2vw; /* إزالة ال padding العلوي القديم */
 }
 
 
@@ -398,326 +461,202 @@ ABOUT, TEAM, PLANTS, BIRDS, MOUNTAINS - نص فوق الصورة
     background: rgba(0,0,0,0.35); /* نفس الخلفية الشفافة */
     padding: 1.8vw;           /* الحفاظ على البادينغ */
     border-radius: 25px;      /* نفس الحواف */
-    max-width: 80%;           /* حجم مناسب للجوال */
+    max-width: 50%;           /* حجم مناسب للجوال */
     text-align: center;
 }
 
 
 
-/* =============================================
-SERVICES SECTION – CIRCULAR DESIGN
-============================================= */
-.services-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
-    padding: 3vw 1vw;
-    position: relative;
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(8px);
-    width: 95%;
-    margin: 2vw auto;
-    border-radius: 95px;
-}
-
-.services-section h2 {
-    font-size: 3.5vw;
-    font-weight: 800;
-    text-align: center;
-    background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 2vw;
-}
-
-/* Cards Container */
-.services-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 دوائر في الصف */
-    gap: 3vw;
-    justify-items: center;
-    width: 100%;
-}
-
-/* Service Card – Circle */
-.service-card {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%; /* دائرة كاملة */
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(40px);
-    box-shadow: 0 0 30px rgba(255,60,172,0.4);
-    border: 2px solid rgba(255,255,255,0.2);
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8vw;
-    transition: transform 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
-}
-
-/* Icon */
-.service-card i {
-    font-size: 3.2vw;
-    background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: transform 0.4s ease;
-}
-
-/* Title */
-.service-card h3 {
-    font-size: 1.3vw;
-    font-weight: 800;
-    background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-/* Text */
-.service-card p {
-    font-size: 1vw;
-    font-weight: 600;
-    line-height: 1.2;
-    max-width: 80%;
-}
-
-/* Hover Effect */
-.service-card:hover {
-    transform: translateY(-0.8vw) scale(1.08);
-    box-shadow: 0 0 60px rgba(255,60,172,0.9);
-    border: 2px solid rgba(255,60,172,0.7);
-}
-
-.service-card:hover i {
-    transform: scale(1.25) rotate(6deg);
-}
-
-/* =============================================
-MOBILE RESPONSIVE
-============================================= */
-@media (max-width: 768px) {
-
-    .services-cards {
-        grid-template-columns: repeat(3, 1fr); /* صفين في الجوال */
-        gap: 6vw;
-    }
-
-    .service-card {
-        width: 180px;
-        height: 180px;
-    }
-
-    .service-card i {
-        font-size: 9vw;
-    }
-
-    .service-card h3 {
-        font-size: 4vw;
-    }
-
-    .service-card p {
-        font-size: 3.2vw;
-    }
-
-    .services-section h2 {
-        font-size: 6vw;
-    }
 }
 /* تحريك الصورة قليلًا نحو اليمين */
 .about-content .icon-box {
     position: relative;   /* ضروري لتحريكها */
-    left: -100px;           /* تحريك 100px نحو اليمين، غيّر الرقم حسب رغبتك */
+    left: -65px;           /* تحريك 100px نحو اليمين، غيّر الرقم حسب رغبتك */
 }
 
-/* =============================================
-PRICE SECTION
-============================================= */
-.price-section {
+
+.pricing-section {
+    margin: 5vw auto;
+    padding: 3vw 2vw;
+    text-align: center;
+}
+
+.pricing-title {
+    font-size: 2rem;
+    margin-bottom: 2vw;
+    background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* الصندوق الشفاف */
+.pricing-box {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0vw;
-    padding: 1vw 1vw;
-    position: relative;
-    background: rgba(255,255,255,0.05);
+    gap: 1.5vw;
+    padding: 2.5vw;
+    background: rgba(255,255,255,0.06);
     backdrop-filter: blur(20px);
-    width: 95%;
-    margin: 0vw auto;
-    border-radius: 500px;
+    border-radius: 35px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 
-.price-section h2 {
-    font-size: 3.5vw;
-    font-weight: 999;
-    text-align: center;
-    background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 1vw;
-}
-
-.price-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5vw;
-    justify-content: center;
-    align-items: stretch;
-}
-
+/* البطاقة */
 .price-card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
-    border-radius: 300px;
-    padding: 1vw 1vw;
-    width: 200px;
-    height: 400px;
-    text-align: center;
+    min-width: 230px;
+    height: 280px;
+    border-radius: 28px;
+    padding: 1.8vw;
     color: white;
-    font-family: 'Cairo', sans-serif;
-    box-shadow: 0 0 20px rgba(255,60,172,0.4);
-    border: 2px solid rgba(255,255,255,0.2);
-    transition: transform 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
-    cursor: pointer;
+
+    background: rgba(255,255,255,0.12);   /* شفافية */
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(255,255,255,0.12);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1vw;
+    gap: 14px;
+
+    transition: all 0.45s ease;
 }
 
+/* الأيقونة */
+.price-icon {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+/* النص */
 .price-card h3 {
-    font-size: 8vw;
-    font-weight: 950;
-    background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip: text;
-    color: transparent;
+    font-size: 1.2rem;
+}
+
+.price-card span {
+    font-size: 2.1rem;
+    font-weight: 900;
 }
 
 .price-card p {
-    font-size: 8.8vw;
-    font-weight: 900;
-    color: #fff;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
 
+/* ألوان خفيفة لكل بطاقة */
+.card-1 { border: 1px solid rgba(255,80,150,0.4); }
+.card-2 { border: 1px solid rgba(255,200,50,0.4); color:#222; }
+.card-3 { border: 1px solid rgba(80,150,255,0.4); }
+.card-4 { border: 1px solid rgba(100,220,120,0.4); color:#222; }
+
+/* Hover */
 .price-card:hover {
-    transform: translateY(-1vw) scale(1.05);
-    box-shadow: 0 0 60px rgba(255,60,172,0.9);
-    border: 2px solid rgba(255,60,172,0.7);
+    transform: translateY(-12px) scale(1.07);
+    box-shadow: 0 0 45px rgba(255,255,255,0.35);
 }
 
-/* ==============================================
-PRICE CARDS - خمس بطاقات في صف واحد ثابت
-============================================== */
-.price-cards {
-    display: flex;
-    justify-content: space-between; /* توزيع متساوي للبطاقات */
-    flex-wrap: nowrap;               /* منع التفاف البطاقات لسطر ثاني */
-    width: 200%;                     /* عرض كامل للصف */
-    max-width: 300px;               /* حد أقصى للعرض */
-    margin: 0 auto;                  /* توسيط الصف */
-    gap: 1vw;                         /* مسافة بسيطة بين البطاقات */
-    padding: 2vw 0;
-}
-
-.price-card {
-    flex: 1 1 calc(20% - 0.8vw);    /* كل بطاقة تأخذ 20% من الصف (5 بطاقات) */
-    min-width: 100px;                 /* الحد الأدنى للبطاقة */
-    height: auto;                     /* ارتفاع متناسب تلقائي */
-    border-radius: 50px;              /* انحناء الحواف */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-}
-
-/* أيقونات أو الصور داخل البطاقة */
-.price-card img {
-    width: 60%;              /* حجم الأيقونة داخل البطاقة */
-    height: auto;
-    margin-bottom: 1vw;
-}
-
-/* ===================== للجوال ===================== */
-@media (max-width: 768px) {
-    .price-cards {
-        gap: 1vw;
+/* جوال */
+@media(max-width:768px){
+    .pricing-box {
+        gap: 4vw;
+        padding: 4vw;
     }
+
     .price-card {
-        flex: 1 1 calc(20% - 0.8vw);  /* البطاقات تصغر لتبقى 5 في صف واحد */
-        min-width: 60px;
-    }
-    .price-card img {
-        width: 50%;
+        min-width: 250px;
+        height: 300px;
     }
 }
 
 
-/* =============================================
-CONTACT SECTION
-============================================= */
+
 .contact-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 0.8vw;
-    padding: 3vw 0.5vw;
-    position: relative;
+    align-items: center;
+    padding: 3vw 1vw;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    width: 75%;
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
     margin: 2vw auto;
-    border-radius: 300px;
+    max-width: 400px;
+    flex-direction: column;
 }
 
-.contact-section h2 {
-    font-size: 2.5vw;
-    font-weight: 800;
-    text-align: center;
-    background: linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 0vw;
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.contact-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(255,152,0,0.6);
 }
 
 .contact-icons {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2vw;
     justify-content: center;
-    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
 }
 
 .contact-icon {
-    background: rgba(255,255,255,0.05);
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.1);
     backdrop-filter: blur(60px);
-    border-radius: 80px;
-    width: 100px;
-    height: 100px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 6vw;
-    text-decoration: none;
-    box-shadow: 0 0 20px rgba(255,60,172,0.4);
-    transition: transform 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
-    cursor: pointer;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.contact-icon i { pointer-events: none; }
-
 .contact-icon:hover {
-    transform: translateY(-1vw) scale(1.1);
-    box-shadow: 0 0 60px rgba(255,60,172,0.9);
-    border: 2px solid rgba(255,60,172,0.7);
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px rgba(255,152,0,0.8);
+    background: linear-gradient(45deg, #ff3cac, #784ba0, #2b86c5);
+}
+
+/* Responsive للجوّال */
+@media(max-width:768px){
+    .contact-section { max-width: 90%; padding: 4vw 2vw; }
+    .contact-image { width: 100px; height: 100px; }
+    .contact-icons { gap: 3vw; }
+    .contact-icon { width: 50px; height: 50px; font-size: 4vw; }
+}
+
+/* ======== Responsive ======== */
+@media(max-width:768px){
+    .contact-section { max-width: 90%; padding: 5vw 2vw; }
+    .contact-image img { width: 150px; height: 150px; }
+    .contact-icon { width: 40px; height: 40px; font-size: 1.2rem; }
+}
+@media(max-width:768px){
+    .contact-icons {
+        flex-direction: row !important;   /* أجبر الاتجاه أفقي */
+        justify-content: center;
+        gap: 3vw;                         /* تباعد مناسب للجوال */
+    }
+
+    .contact-icon {
+        width: 60px;     /* حجم مناسب للأيقونات */
+        height: 60px;
+        font-size: 5vw;  /* تكبير الأيقونة قليلاً لتناسب الجوال */
+    }
 }
 
 
@@ -777,71 +716,6 @@ RESPONSIVE
     .contact-section h2 { font-size: 6vw; }
 
 }
-
-/* ================= PRICING CARDS ================= */
-.pricing-section{
-    padding:8vw 3vw;
-    background:linear-gradient(120deg,#FF9800,#FF5722);
-    border-radius:30px;
-    margin:5vw auto;
-    max-width:1200px;
-    color:white;
-    text-align:center;
-}
-.pricing-section h2{
-    font-size:3.5vw;
-    font-weight:800;
-    margin-bottom:3vw;
-    background:linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-.pricing-cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:2vw;
-}
-.pricing-card{
-    background:rgba(255,255,255,0.1);
-    backdrop-filter:blur(20px);
-    border-radius:25px;
-    padding:2vw;
-    width:250px;
-    transition:0.4s;
-    cursor:pointer;
-    box-shadow:0 0 30px rgba(0,0,0,0.3);
-}
-.pricing-card:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 50px rgba(255,152,0,0.8);
-}
-.pricing-card h3{
-    font-size:1.5vw;
-    font-weight:700;
-    margin-bottom:1vw;
-}
-.pricing-card p{
-    font-size:1.2vw;
-    margin:0.5vw 0;
-}
-.pricing-card span{
-    display:block;
-    font-size:2vw;
-    font-weight:800;
-    margin-top:1vw;
-    background:linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-@media(max-width:768px){
-    .pricing-card{width:90%; margin:auto;}
-    .pricing-card h3{font-size:4vw;}
-    .pricing-card p{font-size:3.5vw;}
-    .pricing-card span{font-size:5vw;}
-    .pricing-section h2{font-size:6vw;}
-}
-
 /* =============================================
 RESPONSIVE FIXED FOR MOBILE VS LAPTOP
 ============================================= */
