@@ -377,7 +377,7 @@ ABOUT SOCOTRA IMAGE ONLY
 /* للجوال فقط */
 @media (max-width: 768px) {
     .about-socotra .icon-box img {
-        max-width: 400px; /* أصغر على الهاتف */
+        max-width: 300px; /* أصغر على الهاتف */
         border-radius: 20px;
     }
 }
